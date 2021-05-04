@@ -30,5 +30,15 @@ public class Car {
         return Objects.hash(name, position);
     }
 
+    @Override
+    public String toString() {
+        StringBuffer line = new StringBuffer();
+        line.append(this.name.getName() + " : ");
+        for (int i = 0; i < position.getPosition(); i++) {
+            line.append("-");
+        }
+
+        return line.toString();
+    }
 
 }

@@ -35,6 +35,8 @@ public class RacingCarController {
     private void drive(Cars cars) {
         for (Car car : cars.getCarList()) {
             car.move(new RandomMovingStrategy());
+            resultView.renderMove(car);
         }
+        System.out.println();
     }
 }
