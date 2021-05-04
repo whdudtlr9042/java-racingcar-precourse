@@ -11,6 +11,11 @@ public class Car {
         this.position = new Position();
     }
 
+    public void move(MovingStrategy movingStrategy) {
+        if(movingStrategy.movable()){
+            position.plus();
+        }
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -24,4 +29,6 @@ public class Car {
     public int hashCode() {
         return Objects.hash(name, position);
     }
+
+
 }

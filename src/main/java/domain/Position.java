@@ -13,7 +13,7 @@ public class Position {
         this.position = position;
     }
 
-    public void move(){
+    public void plus(){
         this.position ++;
     }
 

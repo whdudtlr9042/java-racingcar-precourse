@@ -18,7 +18,7 @@ public class PositionTest {
     void 위치_이동(int move_count) {
         Position position = new Position();
         for(int i =0; i<move_count; i++){
-            position.move();
+            position.plus();
         }
         assertThat(position).isEqualTo(new Position(move_count));
     }

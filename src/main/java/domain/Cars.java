@@ -21,4 +21,8 @@ public class Cars {
     public int carsCount() {
         return carList.size();
     }
+
+    public List<Car> getCarList() {
+        return carList;
+    }
 }
