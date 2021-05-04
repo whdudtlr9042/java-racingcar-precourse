@@ -33,4 +33,8 @@ public class Position {
     public int hashCode() {
         return Objects.hash(position);
     }
+
+    public boolean compare(Position maxPosition) {
+        return this.position > maxPosition.getPosition();
+    }
 }

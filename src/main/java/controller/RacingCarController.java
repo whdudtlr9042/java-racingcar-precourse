@@ -24,6 +24,7 @@ public class RacingCarController {
 
         racing(cars, count);
 
+        winner(cars);
     }
 
     private void racing(Cars cars, int count) {
@@ -38,5 +39,10 @@ public class RacingCarController {
             resultView.renderMove(car);
         }
         System.out.println();
+    }
+
+    private void winner(Cars cars) {
+        Cars winners = new Cars(cars.findWinner());
+        resultView.renderWinner(winners.getCarNames());
     }
 }

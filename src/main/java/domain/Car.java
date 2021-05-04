@@ -11,6 +11,11 @@ public class Car {
         this.position = new Position();
     }
 
+    public Car(String name, int position) {
+        this.name = new Name(name);
+        this.position = new Position(position);
+    }
+
     public void move(MovingStrategy movingStrategy) {
         if(movingStrategy.movable()){
             position.plus();
@@ -41,4 +46,15 @@ public class Car {
         return line.toString();
     }
 
+    public Position getMaxPosition(Position maxPosition) {
+        return position.compare(maxPosition) ? position : maxPosition;
+    }
+
+    public boolean isWinner(Position max) {
+        return this.position.equals(max);
+    }
+
+    public Name getName() {
+        return this.name;
+    }
 }
